@@ -37,7 +37,7 @@
 //   | TRANS |RGB_TOG| TRANS |RGB_HUI|RGB_HUD| TRANS | TRANS | TRANS | TRANS | TRANS | TRANS | TRANS | TRANS | RESET  |        VOL DN   |
 // |MT(SPACE)|RGB_EFF|RGB_EFR|RGB_SAI|RGB_SAD| TRANS | TRANS | TRANS | TRANS | TRANS | TRANS | TRANS |         TRANS  |         MUTE    |
 //   | SHIFT | TRANS | TRANS |RGB_BRI|RGB_BRD| TRANS | TRANS | TRANS | TRANS | TRANS | TRANS | TRANS | TRANS |          PG_UP           |
-//   | TRANS |         GUI   |         TRANS | TRANS |         TRANS | TRANS  |                                 TRANS   | PG_DN | TRANS |
+//   | TRANS |         GUI   |         TRANS | TRANS |         TRANS | TRANS  |                                TRANS    | PG_DN | TRANS |
 
 			bindings = <
     &kp GRAVE        &kp F1           &kp F2           &kp F3          &kp F4          &kp F5        &kp F6           &kp F7           &kp F8           &kp F9           &kp F10          &kp F11          &kp F12          &trans           &trans         &kp C_VOL_UP
