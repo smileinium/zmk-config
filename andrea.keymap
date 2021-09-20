@@ -13,41 +13,41 @@
 
 		default_layer {
 // -----------------------------------------------------------------------------------------
-//   | ESC   | 1     | 2     | 3     | 4     | 5     | 6     | 7     | 8     | 9     | 0     | -     | =     | `     | \     | PRSC  |
-//   | TAB   | Q     | W     | E     | R     | T     | Y     | U     | I     | O     | P     | [     | ]     | \     |         HOME  |
-// |MT(SPACE)| A     | S     | D     | F     | G     | H     | J     | K     | L     | ;     | '     |         ENTER |         DEL   |
-//   | SHIFT | Z     | X     | C     | V     | B     | MENU  | N     | M     | ,     | .     | /     | SHIFT |         UP    |
-//   | CTRL  |         ALT   |  LT(SPACE, 1) | FN    |   LT(SPACE,1) | CTRL  |                                 LEFT  | DOWN  | RIGHT |
+//   | ESC        | 1     | 2     | 3     | 4     | 5     | 6     | 7     | 8     | 9     | 0     | -     | =     | GRAVE | \     | PRSC  |   
+//   | TAB        | Q     | W     | E     | R     | T     | Y     | U     | I     | O     | P     | [     | ]     | BACKSPACE     | HOME  |  
+//   | CAPS       | A     | S     | D     | F     | G     | H     | J     | K     | L     | ;     | '     |         ENTER |         DEL   |  
+//   | SHIFT      | Z     | X     | C     | V     | B     | B     | N     | M     | ,     | .     | /     | SHIFT |         UP    |
+//   | CTRL       |         ALT   |  SPACE  |      LT(BSPC, 1)  |  SPACE  | GUI   |                                 LEFT  | DOWN  | RIGHT |   
 
 			bindings = <
     &kp ESC          &kp NUM_1        &kp NUM_2     &kp NUM_3     &kp NUM_4     &kp NUM_5        &kp NUM_6        &kp NUM_7        &kp NUM_8        &kp NUM_9        &kp NUM_0        &kp MINUS        &kp EQL          &kp GRAVE        &kp BSLH        &kp PSCRN
     &kp TAB          &kp Q            &kp W         &kp E         &kp R         &kp T            &kp Y            &kp U            &kp I            &kp O            &kp P            &kp LBKT         &kp RBKT         &kp BSPC                         &kp HOME
     &kp CAPS         &kp A            &kp S         &kp D         &kp F         &kp G            &kp H            &kp J            &kp K            &kp L            &kp SCLN         &kp QUOT                          &kp ENTER                        &kp DEL
-    &kp LSHFT        &kp Z            &kp X         &kp C         &kp V         &kp B            &kp K_CMENU      &kp N            &kp M            &kp CMMA         &kp DOT          &kp FSLH         &kp RSHFT                         &kp UP
-    &kp LCTRL                         &kp LALT                    &kp SPACE     &kp FN           &kp SPACE        &kp RCTRL                                                                                              &kp LEFT         &kp DOWN        &kp RIGHT
+    &kp LSHFT        &kp Z            &kp X         &kp C         &kp V         &kp B            &kp C_MENU       &kp N            &kp M            &kp CMMA         &kp DOT          &kp FSLH         &kp RSHFT                         &kp UP
+    &kp LCTRL                         &kp LALT                    &kp SPACE     &mo 1            &kp SPACE        &kp LGUI                                                                                              &kp LEFT         &kp DOWN        &kp RIGHT
 			>;
 			
-			sensor-bindings = <&inc_dec_kp C_AC_SCROLL_DOWN C_AC_SCROLL_UP>;
+			sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
 			
 		};
 
 		fn_layer {
 // -----------------------------------------------------------------------------------------
-//   | GRAVE | F1    | F2    | F3    | F4    | F5    | F6    | F7    | F8    | F9    | F10   | F11   | F12   | TRANS  | TRANS |  VOL UP |
-//   | TRANS |RGB_TOG| TRANS |RGB_HUI|RGB_HUD| TRANS | TRANS | TRANS | TRANS | TRANS | TRANS | TRANS | TRANS | RESET  |        VOL DN   |
-// |MT(SPACE)|RGB_EFF|RGB_EFR|RGB_SAI|RGB_SAD| TRANS | TRANS | TRANS | TRANS | TRANS | TRANS | TRANS |         TRANS  |         MUTE    |
-//   | SHIFT | TRANS | TRANS |RGB_BRI|RGB_BRD| TRANS | TRANS | TRANS | TRANS | TRANS | TRANS | TRANS | TRANS |          PG_UP           |
-//   | TRANS |         GUI   |         TRANS | TRANS |         TRANS | TRANS  |                                TRANS    | PG_DN | TRANS |
+//   | TRANS | F1     | F2       | F3     | F4     | F5       | F6    | F7    | F8    | F9    | F10   | F11   | F12   | BOOTLOADER  | TRANS | MUTE  |
+//   | BT_CLR|BT_SEL 1| BT_SEL 2 |BT_SEL 3|BT_SEL 4| BT_SEL 5 | PSCR  | SCLK  | PAUSE | TRANS | TRANS | TRANS | TRANS | RESET       |         NEXT T|
+//   |TRANS  |RGB_TOG |  RGB_EFR |RGB_SAI |RGB_BRI | RGB_HUI  | INS   | HOME  | PG_UP | TRANS | TRANS | TRANS |         TRANS       |         PREV T|
+//   | SHIFT | RGB_EFF| TRANS    |RGB_SAD |RGB_BRD | RGB_HUD  | TRANS | DEL   | END   | PG_DN | TRANS | TRANS | TRANS |               PG_UP |
+//   | TRANS |         GUI   |         TRANS | TRANS    |         TRANS | MENU  |                                            HOME   | PG_DN | END   |
 
 			bindings = <
-    &kp GRAVE        &kp F1           &kp F2           &kp F3          &kp F4          &kp F5        &kp F6           &kp F7           &kp F8           &kp F9           &kp F10          &kp F11          &kp F12          &trans           &trans         &kp C_VOL_UP
-    &trans           &rgb_ug RGB_TOG  &trans           &rgb_ug RGB_HUI &rgb_ug RGB_HUD &trans        &trans           &trans           &trans           &trans           &trans           &trans           &trans           &kp C_RESET                     &kp C_VOL_DN
-    &trans           &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SAI &rgb_ug RGB_SAD &trans        &trans           &trans           &trans           &trans           &trans           &trans                            &trans                          &kp C_MUTE
-    &kp LSHFT        &trans           &trans           &rgb_ug RGB_BRI &rgb_ug RGB_BRD &trans        &trans           &trans           &trans           &trans           &trans           &trans           &trans                            &kp PG_UP
-    &trans                            &kp LGUI                         &trans          &trans        &trans           &trans                                                                                                &trans           &kp PG_DN      &trans        
+    &trans           &kp F1           &kp F2           &kp F3          &kp F4          &kp F5            &kp F6           &kp F7           &kp F8           &kp F9           &kp F10          &kp F11          &kp F12          &bootloader      &trans         &kp C_VOL_UP
+    &bt BT_CLR       &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3    &bt BT_SEL 4    &bt BT_SEL 5      &trans           &trans           &trans           &trans           &trans           &trans           &trans           &reset                          &kp C_VOL_DN
+    &trans           &rgb_ug RGB_TOG  &rgb_ug RGB_EFR  &rgb_ug RGB_SAI &rgb_ug RGB_BRI &rgb_ug RGB_HUI   &kp INS          &trans           &trans           &trans           &trans           &trans                            &trans                          &kp C_MUTE
+    &kp LSHFT        &rgb_ug RGB_EFF  &trans           &rgb_ug RGB_SAD &rgb_ug RGB_BRD &rgb_ug RGB_HUD   &trans           &trans           &trans           &trans           &trans           &trans           &trans                            &kp PG_UP
+    &trans                            &kp LGUI                         &trans          &trans        &trans           &kp C_MENU                                                                                                  &trans         &kp PG_DN      &trans        
 			>;
 
-			sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+			sensor-bindings = <&inc_dec_kp BKSP   DEL>;
 
 		};
 
